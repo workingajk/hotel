@@ -1,0 +1,1741 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- g-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="shortcut icon" href="./img/" type="image/x-icon" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-warning text-white position-sticky top-0 z-1">
+        <div class="container-fluid text-white">
+            <a class="navbar-brand text-white" href="#">Hotel Transelvania</a>
+
+            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Hotel Transelvania</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body text-dark">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark active" aria-current="page" href="#rooms">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" href="#feedback">Testimonials</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-dark" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="#rooms">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-link text-white" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="nav-link text-white" href="#feedback">Testimonials</a>
+                    </li>
+                    <li>
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
+
+    <section class="container px-auto text-center">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner " style="height: 100%;">
+                <div class="carousel-item active">
+                    <img src="./img/hotel1.jpg" class="d-block object-fit-cover" height="600px" width="100%" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Luxury Suite Elegance</h5>
+                        <p>Experience ultimate comfort in our premium suites with stunning views, marble bathrooms, and
+                            personalized concierge service.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/h2.jpg" class="d-block object-fit-fill" height="600px" width="100%" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Deluxe Room</h5>
+                        <p>Spacious and elegantly decorated with premium bedding, flat-screen TV, mini bar, and access
+                            to our fitness center and pool facilities.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/h5.webp" class="d-block object-fit-cover" height="600px" width="100%" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Standard Room</h5>
+                        <p>Comfortable and affordable accommodation featuring essential amenities, cozy bedding, and
+                            convenient access to hotel services and dining options.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div id="featured" class="py-5">
+            <h1> Featured </h1>
+            <div class="d-flex justify-content-between">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/hotel1.jpg" class="card-img-top" height="100%" alt="Luxury Suite">
+                    <div class="card-body d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Luxury Suite</h5>
+                        <p class="card-text">Premium suite with stunning views, marble bathroom, and personalized
+                            concierge service.</p>
+                        <a href="#" class="btn btn-primary">$299/night</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/h2.jpg" class="card-img-top" height="100%" alt="Deluxe Room">
+                    <div class="card-body d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Deluxe Room</h5>
+                        <p class="card-text">Spacious and elegantly decorated with premium bedding, flat-screen TV, and
+                            mini bar.</p>
+                        <a href="#" class="btn btn-primary">$199/night</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/h3.jpg" class="card-img-top" height="100%" alt="Executive Room">
+                    <div class="card-body d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Executive Room</h5>
+                        <p class="card-text">
+                            Designed for business and leisure travelers, featuring a king-size bed,
+                            and city skyline views.
+                        </p>
+                        <a href="#" class="btn btn-primary">$169/night</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/h4.jpg" class="card-img-top" height="100%" alt="Family Suite">
+                    <div class="card-body d-flex flex-column justify-content-end">
+                        <h5 class="card-title">Family Suite</h5>
+                        <p class="card-text">
+                            A spacious suite with two bedrooms, and plenty of space for unforgettable family vacations.
+                        </p>
+                        <a href="#" class="btn btn-primary">$249/night</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    A list of rooms categorized by type (e.g., Standard, Deluxe, Suite, Family Room).
+    Each room should include a name, description, price, and a small image.
+    Use Bootstrap cards and grids to display the rooms attractively.
+    Add a "View Details" button on each room card that opens a Bootstrap Modal with more information and additional images of the room.
+     -->
+    <section id="rooms" class="container ">
+        <h1 class="text-center ">Categories</h1>
+        <h2 class="my-4">Standard Rooms</h2>
+
+        <div class="row g-4">
+
+            <!-- Room 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/hotel1.jpg" class="card-img-top" alt="Cozy Standard Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Cozy Standard Room</h5>
+                        <p class="card-text">
+                            Perfect for solo travelers with modern amenities, complimentary Wi-Fi,
+                            and a peaceful atmosphere.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$89/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#standard1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h2.jpg" class="card-img-top" alt="Classic Twin Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Classic Twin Room</h5>
+                        <p class="card-text">
+                            Comfortable twin-bed room ideal for friends or business travelers.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$99/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#standard2">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h3.jpg" class="card-img-top" alt="Garden View Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Garden View Room</h5>
+                        <p class="card-text">
+                            Enjoy peaceful mornings overlooking beautiful gardens and landscaped
+                            courtyards.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$109/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#standard3">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h4.jpg" class="card-img-top" alt="Economy Double Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Economy Double Room</h5>
+                        <p class="card-text">
+                            Budget-friendly accommodation offering comfort and convenience for
+                            short stays.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$79/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#standard4">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- =================== MODALS =================== -->
+
+        <!-- Modal 1 -->
+        <div class="modal fade" id="standard1" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cozy Standard Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/hotel1.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            The Cozy Standard Room is designed for guests seeking affordability
+                            without sacrificing comfort. Warm interiors and modern furnishings
+                            provide the perfect setting for a relaxing stay.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Queen-size bed</li>
+                            <li>Free high-speed Wi-Fi</li>
+                            <li>32" Smart TV</li>
+                            <li>Air Conditioning</li>
+                            <li>Private Bathroom</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$89 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                        <button class="btn btn-success">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal fade" id="standard2" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Classic Twin Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h2.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            Featuring two comfortable single beds, this room is perfect for
+                            friends, siblings, or business partners traveling together.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Two Single Beds</li>
+                            <li>Private Bathroom</li>
+                            <li>Work Desk</li>
+                            <li>Free Wi-Fi</li>
+                            <li>Smart TV</li>
+                            <li>Daily Housekeeping</li>
+                        </ul>
+
+                        <h4 class="text-warning">$99 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                        <button class="btn btn-success">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div class="modal fade" id="standard3" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Garden View Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h3.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            Wake up to lush gardens and enjoy a peaceful atmosphere surrounded
+                            by greenery at Hotel Transylvania.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Queen-size Bed</li>
+                            <li>Private Balcony</li>
+                            <li>Garden View</li>
+                            <li>Mini Refrigerator</li>
+                            <li>Smart TV</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$109 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                        <button class="btn btn-success">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 4 -->
+        <div class="modal fade" id="standard4" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Economy Double Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h4.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            Our Economy Double Room offers exceptional value with cozy interiors,
+                            modern amenities, and everything needed for a comfortable stay.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Double Bed</li>
+                            <li>Air Conditioning</li>
+                            <li>Free Wi-Fi</li>
+                            <li>Private Bathroom</li>
+                            <li>32" Smart TV</li>
+                            <li>24-Hour Reception Service</li>
+                        </ul>
+
+                        <h4 class="text-warning">$79 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                        <button class="btn btn-success">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h2 class="my-4">Deluxe Rooms</h2>
+
+        <div class="row g-4">
+
+            <!-- Room 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/hotel1.jpg" class="card-img-top" alt="Deluxe King Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Deluxe King Room</h5>
+                        <p class="card-text">
+                            A spacious room featuring elegant interiors, a king-size bed, and premium amenities for a
+                            relaxing stay.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$169/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#deluxe1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h2.jpg" class="card-img-top" alt="Pool View Deluxe">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pool View Deluxe</h5>
+                        <p class="card-text">
+                            Relax in style while enjoying beautiful views of the hotel's outdoor swimming pool.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$189/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#deluxe2">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h3.jpg" class="card-img-top" alt="City View Deluxe">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">City View Deluxe</h5>
+                        <p class="card-text">
+                            Enjoy modern comfort with large windows offering breathtaking city skyline views.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$179/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#deluxe3">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h4.jpg" class="card-img-top" alt="Premium Deluxe Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Premium Deluxe Room</h5>
+                        <p class="card-text">
+                            Experience enhanced comfort with stylish furnishings, premium bedding, and extra living
+                            space.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$199/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#deluxe4">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= MODALS ================= -->
+
+        <!-- Deluxe 1 -->
+        <div class="modal fade" id="deluxe1" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Deluxe King Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/hotel1.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            The Deluxe King Room offers a spacious and elegant setting with contemporary furnishings,
+                            ensuring a comfortable and memorable stay.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Private Balcony</li>
+                            <li>43" Smart TV</li>
+                            <li>Mini Bar</li>
+                            <li>High-Speed Wi-Fi</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$169 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Deluxe 2 -->
+        <div class="modal fade" id="deluxe2" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Pool View Deluxe</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h2.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            Unwind with scenic views of the swimming pool while enjoying modern amenities designed for
+                            comfort.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Pool View Balcony</li>
+                            <li>Rain Shower</li>
+                            <li>Coffee Maker</li>
+                            <li>Mini Refrigerator</li>
+                            <li>Free Wi-Fi</li>
+                        </ul>
+
+                        <h4 class="text-warning">$189 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Deluxe 3 -->
+        <div class="modal fade" id="deluxe3" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">City View Deluxe</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h3.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            Admire the city skyline from your room while relaxing in a modern and stylish environment.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Large Windows</li>
+                            <li>Workspace</li>
+                            <li>Smart TV</li>
+                            <li>Mini Bar</li>
+                            <li>Breakfast Included</li>
+                        </ul>
+
+                        <h4 class="text-warning">$179 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Deluxe 4 -->
+        <div class="modal fade" id="deluxe4" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Premium Deluxe Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h4.jpg" class="img-fluid rounded mb-3" alt="">
+
+                        <p>
+                            Designed for guests seeking extra comfort, the Premium Deluxe Room combines elegant décor
+                            with spacious interiors.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Luxury Bathroom</li>
+                            <li>Seating Area</li>
+                            <li>Mini Bar</li>
+                            <li>Smart TV</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$199 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h2 class="my-4">Suite Rooms</h2>
+
+        <div class="row g-4">
+
+            <!-- Room 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/hotel1.jpg" class="card-img-top" alt="Junior Suite">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Junior Suite</h5>
+                        <p class="card-text">
+                            A spacious suite featuring a separate seating area, modern décor, and premium comfort.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$249/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#suite1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h2.jpg" class="card-img-top" alt="Luxury Suite">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Luxury Suite</h5>
+                        <p class="card-text">
+                            Elegant interiors with panoramic views, a private lounge, and premium amenities.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$299/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#suite2">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h3.jpg" class="card-img-top" alt="Honeymoon Suite">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Honeymoon Suite</h5>
+                        <p class="card-text">
+                            A romantic retreat with luxurious furnishings, private balcony, and beautiful views.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$329/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#suite3">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h4.jpg" class="card-img-top" alt="Presidential Suite">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Presidential Suite</h5>
+                        <p class="card-text">
+                            The hotel's finest accommodation offering unmatched luxury, privacy, and spacious living.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$499/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#suite4">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= SUITE MODALS ================= -->
+
+        <!-- Junior Suite -->
+        <div class="modal fade" id="suite1" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Junior Suite</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/hotel1.jpg" class="img-fluid rounded mb-3" alt="Junior Suite">
+
+                        <p>
+                            The Junior Suite provides additional space and comfort, making it ideal
+                            for couples and guests planning an extended stay.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Separate Seating Area</li>
+                            <li>43" Smart TV</li>
+                            <li>Mini Bar</li>
+                            <li>Complimentary Wi-Fi</li>
+                            <li>Breakfast Included</li>
+                        </ul>
+
+                        <h4 class="text-warning">$249 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Luxury Suite -->
+        <div class="modal fade" id="suite2" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Luxury Suite</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h2.jpg" class="img-fluid rounded mb-3" alt="Luxury Suite">
+
+                        <p>
+                            The Luxury Suite combines elegant décor with spacious interiors and
+                            breathtaking views for a truly memorable stay.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Private Balcony</li>
+                            <li>Luxury Bathroom</li>
+                            <li>Living Area</li>
+                            <li>Mini Bar</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$299 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Honeymoon Suite -->
+        <div class="modal fade" id="suite3" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Honeymoon Suite</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h3.jpg" class="img-fluid rounded mb-3" alt="Honeymoon Suite">
+
+                        <p>
+                            Thoughtfully designed for couples, the Honeymoon Suite offers privacy,
+                            comfort, and romantic surroundings for unforgettable moments.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>King-size Bed</li>
+                            <li>Private Balcony</li>
+                            <li>Luxury Bathroom</li>
+                            <li>Champagne Welcome</li>
+                            <li>Room Service</li>
+                            <li>Breakfast Included</li>
+                        </ul>
+
+                        <h4 class="text-warning">$329 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Presidential Suite -->
+        <div class="modal fade" id="suite4" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Presidential Suite</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h4.jpg" class="img-fluid rounded mb-3" alt="Presidential Suite">
+
+                        <p>
+                            The Presidential Suite is our most luxurious accommodation, offering
+                            generous living spaces and premium services for an exceptional stay.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Master Bedroom</li>
+                            <li>Private Living Room</li>
+                            <li>Dining Area</li>
+                            <li>Luxury Bathroom</li>
+                            <li>Butler Service</li>
+                            <li>65&quot; Smart TV</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$499 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h2 class="my-4">Family Rooms</h2>
+
+        <div class="row g-4">
+
+            <!-- Room 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/hotel1.jpg" class="card-img-top" alt="Family Suite">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Family Suite</h5>
+                        <p class="card-text">
+                            Spacious accommodation with two bedrooms and a cozy living area, perfect for family
+                            vacations.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$249/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#family1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h2.jpg" class="card-img-top" alt="Connecting Family Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Connecting Family Room</h5>
+                        <p class="card-text">
+                            Two interconnected rooms offering privacy and convenience for larger families.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$279/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#family2">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h3.jpg" class="card-img-top" alt="Kids Adventure Room">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Kids Adventure Room</h5>
+                        <p class="card-text">
+                            A colorful family room featuring a dedicated play area and child-friendly amenities.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$239/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#family3">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <img src="./img/h4.jpg" class="card-img-top" alt="Grand Family Suite">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Grand Family Suite</h5>
+                        <p class="card-text">
+                            A luxurious suite with multiple bedrooms, ideal for large families or group travelers.
+                        </p>
+                        <p class="text-warning fw-bold fs-5">$349/night</p>
+
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#family4">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= FAMILY MODALS ================= -->
+
+        <!-- Family Suite -->
+        <div class="modal fade" id="family1" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Family Suite</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/hotel1.jpg" class="img-fluid rounded mb-3" alt="Family Suite">
+
+                        <p>
+                            Designed with families in mind, the Family Suite provides generous space,
+                            comfortable furnishings, and everything needed for a relaxing holiday together.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Two Bedrooms</li>
+                            <li>Separate Living Room</li>
+                            <li>Dining Area</li>
+                            <li>50" Smart TV</li>
+                            <li>Mini Refrigerator</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$249 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Connecting Family Room -->
+        <div class="modal fade" id="family2" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Connecting Family Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h2.jpg" class="img-fluid rounded mb-3" alt="Connecting Family Room">
+
+                        <p>
+                            Two connected rooms allow families to stay together while enjoying
+                            extra privacy and convenience.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Two Connected Bedrooms</li>
+                            <li>Two Bathrooms</li>
+                            <li>Free High-Speed Wi-Fi</li>
+                            <li>Mini Fridge</li>
+                            <li>Smart TV</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$279 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Kids Adventure Room -->
+        <div class="modal fade" id="family3" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Kids Adventure Room</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h3.jpg" class="img-fluid rounded mb-3" alt="Kids Adventure Room">
+
+                        <p>
+                            A fun-filled room specially designed for families with children,
+                            featuring colorful interiors and child-safe furnishings.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Bunk Beds for Children</li>
+                            <li>Play Area</li>
+                            <li>Board Games</li>
+                            <li>Smart TV with Kids Channels</li>
+                            <li>Child Safety Features</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$239 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Grand Family Suite -->
+        <div class="modal fade" id="family4" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Grand Family Suite</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <img src="./img/h4.jpg" class="img-fluid rounded mb-3" alt="Grand Family Suite">
+
+                        <p>
+                            Our largest family accommodation offers luxurious comfort, multiple
+                            bedrooms, and spacious living areas for unforgettable family gatherings.
+                        </p>
+
+                        <h6>Room Features</h6>
+
+                        <ul>
+                            <li>Three Bedrooms</li>
+                            <li>Large Living Room</li>
+                            <li>Dining Area</li>
+                            <li>Kitchenette</li>
+                            <li>Private Balcony</li>
+                            <li>65" Smart TV</li>
+                            <li>Complimentary Breakfast</li>
+                        </ul>
+
+                        <h4 class="text-warning">$349 / Night</h4>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success">Book Now</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section:
+    Information about the hotel, its history, and what makes it unique.
+    Include images of the hotel, its surroundings, or its founders.
+    Highlight any special amenities or services provided by the hotel. 
+    -->
+    <section id="about" class="container my-4">
+        <div class="text-center mb-5">
+            <h1>About Hotel Transylvania</h1>
+            <p class="lead">
+                Where Comfort Meets Timeless Hospitality
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="./img/h5.webp" class="img-fluid rounded shadow" alt="">
+            </div>
+            <div class="col">
+                <h3>Our Story</h3>
+
+                <p>
+                    Established in 2012, Hotel Transylvania has become one of the region's premier luxury destinations,
+                    offering exceptional hospitality to travelers
+                    from around the world. Blending elegant architecture with modern comforts, our hotel provides a
+                    peaceful retreat for families, couples, and business
+                    guests alike.
+                </p>
+
+                <p>
+                    Every room is thoughtfully designed to provide comfort, convenience, and
+                    unforgettable experiences. Whether you're visiting for business, a family
+                    vacation, or a relaxing weekend getaway, our dedicated staff is committed
+                    to making your stay truly memorable.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="text-center mt-5 mb-4">Why Choose Hotel Transylvania?</h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <img src="./img/pool.jpg" class="img-fluid rounded mb-3" alt="">
+                <h5>Luxury Accommodation</h5>
+                <p>
+                    Spacious rooms and suites designed with modern interiors,
+                    premium bedding, and beautiful views.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <img src="./img/restaurant.jpg" class="img-fluid rounded mb-3" alt="">
+                <h5>Fine Dining</h5>
+                <p>
+                    Enjoy delicious local and international cuisine prepared
+                    by our experienced chefs.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <img src="./img/spa.jpg" class="img-fluid rounded mb-3" alt="">
+                <h5>Relax & Rejuvenate</h5>
+                <p>
+                    Unwind in our luxury spa, fitness center, and outdoor
+                    swimming pool after a busy day.
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="text-center mt-5 mb-4">Our Amenities</h2>
+        <div class="row">
+
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">✔ Free High-Speed Wi-Fi</li>
+                    <li class="list-group-item">✔ Infinity Swimming Pool</li>
+                    <li class="list-group-item">✔ Luxury Spa & Wellness Center</li>
+                    <li class="list-group-item">✔ Multi-Cuisine Restaurant</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">✔ Fully Equipped Fitness Center</li>
+                    <li class="list-group-item">✔ 24/7 Room Service</li>
+                    <li class="list-group-item">✔ Airport Pickup & Drop</li>
+                    <li class="list-group-item">✔ Free Secure Parking</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services Section:
+
+    A list of services offered by the hotel (e.g., Spa, Gym, Restaurant, Free Wi-Fi).
+    Use Bootstrap's Collapse component to hide and reveal more details about each service.
+    -->
+    <section id="services" class="container">
+        <div class="text-center mb-5">
+            <h1>Services</h1>
+        </div>
+
+        <p class="row flex-wrap gap-4 justify-content-around">
+            <a class="btn btn-primary col-2" data-bs-toggle="collapse" href="#collapse-1" role="button"
+                aria-expanded="false" aria-controls="collapse-1">
+                Luxury Spa & Wellness
+            </a>
+            <a class="btn btn-primary col-2" data-bs-toggle="collapse" href="#collapse-2" role="button"
+                aria-expanded="false" aria-controls="collapse-2">
+                Fitness Center
+            </a>
+            <a class="btn btn-primary col-2" data-bs-toggle="collapse" href="#collapse-3" role="button"
+                aria-expanded="false" aria-controls="collapse-3">
+                Restaurant & Dining
+            </a>
+            <a class="btn btn-primary col-2" data-bs-toggle="collapse" href="#collapse-4" role="button"
+                aria-expanded="false" aria-controls="collapse-4">
+                Outdoor Swimming Pool
+            </a>
+            <a class="btn btn-primary col-2" data-bs-toggle="collapse" href="#collapse-5" role="button"
+                aria-expanded="false" aria-controls="collapse-5">
+                Free High-Speed Wi-Fi
+            </a>
+            <a class="btn btn-primary col-2 " data-bs-toggle="collapse" href="#collapse-6" role="button"
+                aria-expanded="false" aria-controls="collapse-5">
+                Airport Pickup & Drop
+            </a>
+        </p>
+
+        <div class="row g-4">
+
+            <div class="col-4 collapse" id="collapse-1">
+                <div class="card card-body h-100">
+                    Relax and rejuvenate with our full-service spa offering massages, aromatherapy, body treatments, and
+                    wellness therapies. Our experienced therapists ensure a peaceful and refreshing experience for every
+                    guest.
+                </div>
+            </div>
+
+            <div class="col-4 collapse" id="collapse-2">
+                <div class="card card-body h-100">
+                    Stay active during your stay with our modern fitness center equipped with treadmills, exercise
+                    bikes, free weights, strength-training machines, and personal workout spaces.
+                </div>
+            </div>
+
+            <div class="col-4 collapse" id="collapse-3">
+                <div class="card card-body h-100">
+                    Enjoy a variety of local, Indian, Asian, and international dishes prepared by our expert chefs.
+                    Breakfast, lunch, dinner, and room service are available daily.
+                </div>
+            </div>
+
+            <div class="col-4 collapse" id="collapse-4">
+                <div class="card card-body h-100">
+                    Take a refreshing swim in our temperature-controlled outdoor pool or relax on comfortable poolside
+                    loungers while enjoying drinks and snacks from the pool café.
+                </div>
+            </div>
+
+            <div class="col-4 collapse" id="collapse-5">
+                <div class="card card-body h-100">
+                    Stay connected with complimentary high-speed wireless internet available throughout the hotel,
+                    including guest rooms, restaurants, conference halls, and outdoor areas.
+                </div>
+            </div>
+
+            <div class="col-4 collapse " id="collapse-6">
+                <div class="card card-body h-100">
+                    We offer convenient airport transportation with comfortable vehicles and professional drivers to
+                    ensure a smooth arrival and departure experience.
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section:
+
+    A section displaying customer testimonials using a Bootstrap Carousel.
+    Include customer names, photos, and their feedback about their stay.
+    -->
+    <section id="feedback" class="container py-5">
+        <h1 class="text-center fs-1">Testimonials</h1>
+        <div id="carouselCaptions-2" class="carousel slide">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselCaptions-2" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselCaptions-2" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselCaptions-2" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/per1.jpg" class="d-block w-100" height="600" alt="Sarah Johnson">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Sarah Johnson</h5>
+                        <p>
+                            "Hotel Transylvania exceeded all my expectations. The staff was incredibly
+                            welcoming, the room was spotless, and the food was exceptional. I would
+                            definitely stay here again!"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/per2.jpg" class="d-block w-100" height="600" alt="Michael Brown">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Emily Davis</h5>
+                        <p>
+                            "The Deluxe Room was spacious and comfortable, and the amenities were
+                            excellent. The swimming pool and restaurant made our family vacation even
+                            more enjoyable."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/per3.jpg" class="d-block w-100" height="600" alt="Emily Davis">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Michael Brown</h5>
+                        <p>
+                            "A wonderful experience from check-in to check-out. The rooms were luxurious,
+                            the service was outstanding, and the peaceful atmosphere made our stay truly
+                            memorable."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions-2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions-2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- 
+    Contact Section:
+
+    A form to allow customers to send inquiries or booking requests (include fields for name, email, phone, check-in date, check-out date, and message).
+    Include the hotel’s address, phone number, and a Google Maps iframe showing the location.
+    Include a dropdown menu for selecting the type of inquiry (General Inquiry, Room Booking, Event Booking, etc.).
+
+    - form with inquire type
+    - address with map
+    - 
+
+    
+    -->
+    <section id="contact" class="container">
+        <h1 class="fs-1 text-center">Contact</h1>
+        <div class="row my-5 flex-wrap align-items-start ">
+
+            <div class="col card p-4 border rounded shadow-sm me-3">
+                <h2 class="fs-2 text-center">Get in Touch</h2>
+                <div class="row ">
+
+                    <div class="col-3">
+                        <p>Hotel Name:</p>
+                        <p>Address: <br><br><br><br></p>
+                        <p>Phone Number:</p>
+                        <p>Reservation Desk:</p>
+                        <p>Email:</p>
+                        <p>Booking Email:</p>
+                    </div>
+                    <div class="col-6">
+
+                        <p>Hotel Transylvania</p>
+                        <p>Hotel Transylvania <br>
+                            Beach Road, Marine Drive<br>
+                            Kochi, Kerala 682031<br>
+                            India<br>
+                        </p>
+                        <p>+91 98765 43210</p>
+                        <p>+91 98765 43211</p>
+                        <p>info@hoteltransylvania.com</p>
+                        <p>reservations@hoteltransylvania.com</p>
+
+                    </div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2022512.7560205099!2d79.92227722455185!3d7.8434363875396285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ef133c156ef3%3A0x110c62c62bdcfd8c!2sHotel%20Transylvania%20Negombo!5e1!3m2!1sen!2sin!4v1784226076252!5m2!1sen!2sin"
+                    width="100%" height="290" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+
+
+            <form class="col card p-4 border rounded shadow-sm ms-3">
+                <h2 class="fs-2 text-center">Have Any Queries</h2>
+
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                    <label for="fullName">Full Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <label for="email">Email Address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                    <label for="phone">Phone Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="inquiryType">
+                        <option selected disabled>Select Inquiry Type</option>
+                        <option>General Inquiry</option>
+                        <option>Room Booking</option>
+                        <option>Suite Reservation</option>
+                        <option>Family Stay</option>
+                        <option>Event Booking</option>
+                        <option>Wedding Reception</option>
+                        <option>Conference & Business Meeting</option>
+                        <option>Restaurant Reservation</option>
+                        <option>Airport Pickup Request</option>
+                        <option>Feedback & Suggestions</option>
+                    </select>
+                    <label for="inquiryType">Inquiry Type</label>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" id="checkIn">
+                            <label for="checkIn">Check-in Date</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" id="checkOut">
+                            <label for="checkOut">Check-out Date</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" placeholder="Tell us about your inquiry or special requests..."
+                        id="message" style="height: 170px"></textarea>
+                    <label for="message">Message</label>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        Send Inquiry
+                    </button>
+
+                    <button type="reset" class="btn btn-outline-secondary">
+                        Reset
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Connect with Hotel Transylvania on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-hotel me-3"></i>Hotel Transylvania
+                        </h6>
+                        <p>
+                            Luxury stays, refined dining, and memorable events in the heart of the city.
+                            Experience comfort, hospitality, and exceptional service every day.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Our Services
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Rooms & Suites</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Dining & Bar</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Spa & Wellness</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Events & Weddings</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Guest Information
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Offers & Packages</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Check-in Details</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Amenities</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">FAQ & Support</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+                        <p><i class="fas fa-home me-3"></i> 25 Seaview Avenue, Miami Beach, FL 33139</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            reservations@auroragrandhotel.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +1 (305) 555-0198</p>
+                        <p><i class="fas fa-print me-3"></i> +1 (305) 555-0144</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2025 Hotel Transylvania. All rights reserved.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Use Bootstrap Offcanvas for a sidebar menu that can be toggled on smaller screens for additional navigation options. -->
+</body>
+
+</html>
